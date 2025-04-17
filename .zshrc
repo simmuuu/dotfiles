@@ -64,6 +64,8 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
 
+alias zeditor='DRI_PRIME=1 /home/simmu/.local/bin/zed'
+
 # -------------------------------------
 
 # NVM (Node Version Manager)
@@ -84,10 +86,6 @@ fi
 # Spicetify
 export PATH=$PATH:/home/simmu/.spicetify
 
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # Go (Golang)
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -96,3 +94,4 @@ export PATH=$PATH:$GOPATH/bin
 
 # -------------------------------------
 
+. "/home/simmu/.deno/env"
