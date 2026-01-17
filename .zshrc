@@ -53,45 +53,47 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Alias
 alias c='clear'
-alias btop='btop --utf-force'
 alias python='python3'
 alias ssh='kitten ssh'
 alias ls='ls --color'
-
+alias btop='btop --force-utf'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
+alias grep='grep --color'
+alias zed='zeditor'
+alias tmux='tmux -u'
+alias zedx='env -u WAYLAND_DISPLAY zeditor'
 
-alias zeditor='DRI_PRIME=1 /home/simmu/.local/bin/zed'
-
-# -------------------------------------
-
-# NVM (Node Version Manager)
-export NVM_DIR="$HOME/.nvm"
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  source "$NVM_DIR/nvm.sh"  # This loads nvm
-fi
-if [ -s "$NVM_DIR/bash_completion" ]; then
-  source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
-
-# pnpm (Package Manager)
-export PNPM_HOME="/home/simmu/.local/share/pnpm"
-if [[ ":$PATH:" != *":$PNPM_HOME:"* ]]; then
-  export PATH="$PNPM_HOME:$PATH"
-fi
-
-# Spicetify
-export PATH=$PATH:/home/simmu/.spicetify
-
-# Go (Golang)
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+source /usr/share/nvm/init-nvm.sh
 
 
+# #mise
+# eval "$(/home/simmu/.local/bin/mise activate zsh)"
 
-# -------------------------------------
 
-. "/home/simmu/.deno/env"
+# # golang
+# export PATH=$PATH:$HOME/go/bin
+
+
+# # pnpm
+# export PNPM_HOME="/home/simmu/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+# # pnpm end
+# #
+
+# # android studion setup
+
+# export ANDROID_HOME=/home/simmu/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+
+# # bun completions
+# [ -s "/home/simmu/.bun/_bun" ] && source "/home/simmu/.bun/_bun"
